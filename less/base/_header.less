@@ -1,0 +1,204 @@
+.header {
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        .container-big {
+            padding: 29px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .logo {
+                img {
+                    height: 52px;
+                }
+            }
+            .main-menu {
+                display: flex;
+                align-items: center;
+                font-size: 25px;
+                .menu-icon {
+                    margin-right: 8px;
+                }
+                .cart-icon {
+                    margin-right: 50px;
+                    position: relative;
+                    &::after {
+                        content: '2';
+                        font-family: 'lato';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 12px;
+                        text-align: center;
+                        line-height: 20px;
+                        width: 20px;
+                        height: 20px;
+                        background-color: white;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: -8px;
+                        right: -8px;
+                    }
+                }
+                img {
+                    width: 24px;
+                }
+                .menu-bar {
+                    max-width: 600px;
+                    min-width: 320px;
+                    width: 0;
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    bottom: 0;
+                    z-index: 100;
+                    opacity: 1;
+                    background-color: white;
+                    .transit (all .5s);
+                    &.active {
+                        right: 0;
+                    }
+                    .title {
+                        text-align: center;
+                        color: @main-black-color;
+                        background-color: @main-color;
+                        font-family: 'firasans';
+                        font-weight: 700;
+                        font-style: normal;
+                        height: 50px;
+                        line-height: 50px;
+                        font-size: 18px;
+                    }
+                    .menu-content {
+                        padding-top: 10px;
+                        max-height: calc(100vh - 50px);
+                        overflow-y: auto;
+                        .item {
+                            a {
+                                font-family: 'firasans';
+                                font-weight: 400;
+                                font-size: 16px;
+                                padding: 2px 15px;
+                                font-style: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .slider {
+        position: relative;
+        overflow-x: hidden;
+        .slick {
+            .slider-item {
+                .slider-img {
+                    position: relative;
+                    img {
+                        width: 100%;
+                    }
+                    .slider-content {
+                        position: absolute;
+                        top: 34%;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        z-index: 10;
+                        .tranformer(translateY(4px));
+                        .container {
+                            display: flex;
+                            align-items: center;
+                            .row {
+                                display: flex;
+                                flex-wrap: wrap;
+                                margin: 0 -15px;
+                                .col {
+                                    padding: 0 15px;
+                                }
+                                .date {
+                                    width: 100%;
+                                    font-family: 'firasans';
+                                    font-size: 24px;
+                                    letter-spacing: 0.53em;
+                                    font-weight: 400;
+                                    color: @dark-gray-color;
+                                    margin-bottom: 32px;
+                                    font-style: normal;
+                                }
+                                .title {
+                                    width: 100%;
+                                    text-transform: uppercase;
+                                    font-family: 'comorantgaramond';
+                                    font-weight: 600;
+                                    font-style: italic;
+                                    color: @main-black-color;
+                                    font-size: 100px;
+                                    letter-spacing: 0.3em;
+                                    line-height: 101px;
+                                    margin-bottom: 4%;
+                                }
+                                .discover {
+                                    margin-top: 8px;
+                                    width: 100%;
+                                    .discover-btn {
+                                        display: block;
+                                        height: 47px;
+                                        line-height: 47px;
+                                        text-transform: uppercase;
+                                        width: 200px;
+                                        font-family: 'firasans';
+                                        font-weight: 700;
+                                        color: white;
+                                        background-color: @main-black-color;
+                                        text-align: center;
+                                        font-size: 16px;
+                                        letter-spacing: 0.15em;
+                                        font-style: normal;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .slider-social {
+            position: absolute;
+            top: 50%;
+            right: 100px;
+            z-index: 2;
+            text-align: right;
+            .tranformer (translateY(-46%));
+            .social-list {
+                .item {
+                    font-family: 'comorantgaramond';
+                    font-weight: 500;
+                    font-size: 24px;
+                    color: @white-font-color;
+                    position: relative;
+                    padding: 10px 2px;
+                    letter-spacing: 0.085em;
+                    font-style: normal;
+                }
+                .active {
+                    color: white;
+                }
+                .active::after {
+                    content: '';
+                    display: block;
+                    width: 80px;
+                    border-bottom: 1px solid @main-black-color; 
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    .tranformer(translate(20px,-50%))
+                }
+                li {
+                    margin-bottom: 11px;
+                }
+            }
+        }
+    }
+}
