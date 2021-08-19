@@ -7,7 +7,7 @@
         z-index: 10;
         .container-big {
             padding: 29px 25px;
-            display: flex;
+            .flexbox();
             justify-content: space-between;
             align-items: center;
             .logo {
@@ -16,7 +16,7 @@
                 }
             }
             .main-menu {
-                display: flex;
+                .flexbox();
                 align-items: center;
                 font-size: 25px;
                 .menu-icon {
@@ -108,10 +108,10 @@
                         z-index: 10;
                         .tranformer(translateY(4px));
                         .container {
-                            display: flex;
+                            .flexbox();
                             align-items: center;
                             .row {
-                                display: flex;
+                                .flexbox();
                                 flex-wrap: wrap;
                                 margin: 0 -15px;
                                 .col {
@@ -147,7 +147,7 @@
                                         height: 47px;
                                         line-height: 47px;
                                         text-transform: uppercase;
-                                        width: 200px;
+                                        width: 198px;
                                         font-family: 'firasans';
                                         font-weight: 700;
                                         color: white;
@@ -182,10 +182,10 @@
                     letter-spacing: 0.085em;
                     font-style: normal;
                 }
-                .active {
+                .item:hover {
                     color: white;
                 }
-                .active::after {
+                .item:hover::after {
                     content: '';
                     display: block;
                     width: 80px;

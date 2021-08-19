@@ -1,15 +1,23 @@
-.tranformer (@scale) {
-    transform: @scale;
-    -ms-transform: @scale;
-    -o-transform: @scale;
-    -moz-transform: @scale;
-    -ms-transform: @scale;
+.tranformer (@_transform) {
+    transform: @_transform;
+    -ms-transform: @_transform;
+    -o-transform: @_transform;
+    -moz-transform: @_transform;
+    -ms-transform: @_transform;
 }
 
-.transit (@scale) {
-    transition: @scale;
-    -ms-transition: @scale;
-    -o-transition: @scale;
-    -moz-transition: @scale;
-    -ms-transition: @scale;
+.transit (@_transition) {
+    transition: @_transition;
+    -ms-transition: @_transition;
+    -o-transition: @_transition;
+    -moz-transition: @_transition;
+    -ms-transition: @_transition;
+}
+
+.flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
 }

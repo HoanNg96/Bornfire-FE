@@ -54,7 +54,7 @@
                     .item {
                         padding: 0;
                     }
-                    .active::after {
+                    .item:hover::after {
                         transform: translate(10px, -50%);
                     }
                 }
@@ -359,8 +359,32 @@
     .footer {
         .footer-top {
             align-items: center;
+            flex-wrap: wrap;
+            padding-bottom: 0;
+            .logo {
+                order: 1;
+                img {
+                    width: 70%;
+                }
+            }
             nav {
-                display: none;
+                text-align: center;
+                width: 100%;
+                order: 3;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                .nav-item {
+                    &:first-child {
+                        margin-left: 0;
+                        padding-left: 0;
+                    }
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+            .subscribe {
+                order: 2;
             }
         }
     }
@@ -373,12 +397,12 @@
                 padding: 10px 15px;
                 .logo {
                     img {
-                        height: 20px;
+                        height: 30px;
                     }
                 }
                 .main-menu {
                     img {
-                        width: 16px;
+                        width: 20px;
                     }
                     .cart-icon {
                         margin-right: 20px;
@@ -547,14 +571,23 @@
     }
     .footer {
         .footer-top {
-            padding: 30px 0;
+            padding-top: 30px;
+            nav {
+                .nav-item {
+                    display: inline-block;
+                    margin-bottom: 15px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
         }
         .footer-bottom {
             flex-direction: column;
             .social {
                 width: 100%;
                 order: 1;
-                display: flex;
+                .flexbox();
                 justify-content: center;
             }
             .contact {
@@ -601,7 +634,7 @@
                     .item {
                         font-size: 12px;
                     }
-                    .active::after {
+                    .item:hover::after {
                         transform: translate(5px, -50%);
                     }
                     li {

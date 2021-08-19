@@ -248,7 +248,7 @@
         margin-bottom: 95px;
         .container {
             .heading {
-                display: flex;
+                .flexbox();
                 justify-content: space-between;
                 align-items: baseline;
                 padding: 70px 0 62px 0;
@@ -336,7 +336,7 @@
                             bottom: -40px;
                             left: 0;
                             right: 0;
-                            display: flex;
+                            .flexbox();
                             height: 40px;
                             .transit (all .5s);
                             .addcart {
@@ -415,7 +415,7 @@
                     width: 33.3333%;
                     margin-bottom: 30px;
                     .background {
-                        display: flex;
+                        .flexbox();
                         flex-direction: column;
                         background-color: white;
                         height: 100%;
@@ -424,7 +424,7 @@
                             display: block;
                         }
                         .content {
-                            display: flex;
+                            .flexbox();
                             flex-direction: column;
                             padding: 0 34px;
                             padding-top: 26px;
@@ -451,7 +451,7 @@
                         .interaction {
                             height: 59px;
                             line-height: 52px;
-                            display: flex;
+                            .flexbox();
                             font-family: 'firasans';
                             font-style: normal;
                             font-weight: 400;
@@ -509,12 +509,24 @@
                     .image {
                         height: 100%;
                         margin-top: auto;
-                        display: flex;
+                        .flexbox();
                         align-items: center;
+                        opacity: 0.3;
+                        .transit (all .5s);
                         img {
                             display: block;
                             margin: 0 auto;
                         }
+                        &:hover {
+                            opacity: 1;
+                        }
+                        /* &:nth-child(1) {
+                            padding-bottom: 12px;
+                            padding-right: 7px;
+                        }
+                        &:nth-child(2) {
+                            padding-top: 6px;
+                        } */
                     }
                     &.brand-item {
                         &:nth-child(1) {
@@ -547,6 +559,20 @@
                                 width: 154px;
                             }
                         }
+                    }
+                    &:nth-child(1) .image {
+                        padding-bottom: 12px;
+                        padding-right: 7px;
+                    }
+                    &:nth-child(2) .image {
+                        padding-top: 6px;
+                    }
+                    &:nth-child(6) .image {
+                        padding-top: 20px;
+                    }
+                    &:nth-child(6) .image {               
+                        padding-bottom: 2px;
+                        padding-left: 2px;
                     }
                 }
             }
