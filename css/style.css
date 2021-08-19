@@ -959,6 +959,9 @@ ol {
   padding-top: 63px;
   padding-bottom: 74px;
 }
+.footer .footer-top .logo {
+  max-width: 50%;
+}
 .footer .footer-top nav {
   padding-bottom: 10px;
 }
@@ -982,6 +985,7 @@ ol {
   color: #d6ba8d;
 }
 .footer .footer-top .subscribe {
+  max-width: 50%;
   width: 157px;
   height: 36px;
   font-family: 'firasans';
@@ -1454,7 +1458,7 @@ ol {
     display: none;
   }
   .main-content .blog .container .row .col {
-    width: 50%;
+    width: 100%;
   }
   .main-content .brands .container .row .col {
     width: 33.3333%;
@@ -1556,11 +1560,23 @@ ol {
     font-size: 36px;
     top: -26px;
   }
-  .main-content .blog .container .row .col {
-    width: 100%;
-  }
   .main-content .brands .container .row .col {
     width: 50%;
+  }
+  .footer .footer-top nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer .footer-top nav .nav-item:first-child {
+    padding-left: 15px;
+  }
+  .footer .footer-top nav .nav-item:last-child {
+    padding-right: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */

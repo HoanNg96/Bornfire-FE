@@ -554,7 +554,7 @@
             .container {
                 .row {
                     .col {
-                        width: 50%;
+                        width: 100%;
                     }
                 }
             }
@@ -703,11 +703,6 @@
                         top: -26px;
                     }
                 }
-                .row {
-                    .col {
-                        width: 100%;
-                    }
-                }
             }
         }
         .brands {
@@ -715,6 +710,23 @@
                 .row {
                     .col {
                         width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        .footer-top {
+            nav {
+                .flexbox();
+                flex-wrap: wrap;
+                justify-content: center;
+                .nav-item {
+                    &:first-child {
+                        padding-left: 15px;
+                    }
+                    &:last-child {
+                        padding-right: 15px;
                     }
                 }
             }
